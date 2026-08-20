@@ -6,6 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building FMCG Inventory System'
+                sh 'mvn clean package'
             }
         }
 
