@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
@@ -8,9 +7,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.fmcg</groupId>
-
     <artifactId>fmcg-inventory-system</artifactId>
-
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -20,12 +17,11 @@
 
     <build>
         <plugins>
-
+            <!-- Existing Jar Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.4.2</version>
-
                 <configuration>
                     <archive>
                         <manifest>
@@ -33,9 +29,14 @@
                         </manifest>
                     </archive>
                 </configuration>
-
             </plugin>
 
+            <!-- Added SonarQube Plugin -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.11.0.3922</version>
+            </plugin>
         </plugins>
     </build>
 
